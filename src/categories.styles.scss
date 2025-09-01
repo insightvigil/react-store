@@ -4,4 +4,6 @@
 @use './routes/navigation/navigation.styles.scss';
 @use './components/form-input/form-input.styles.scss';
 @use './components/sign-up-form/sign-up-form.styles.scss';
+@use './components/sign-in-form/sign-in-form.styles';
 @use './components/button/button.styles';
+@use './routes/authentication/authentication.styles.scss'

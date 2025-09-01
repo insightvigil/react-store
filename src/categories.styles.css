@@ -161,6 +161,19 @@ body a {
   margin: 10px 0;
 }
 
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+}
+.sign-up-container h2 {
+  margin: 10px 0;
+}
+.sign-up-container .buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .button-container {
   min-width: 165px;
   width: auto;
@@ -201,6 +214,13 @@ body a {
   background-color: black;
   color: white;
   border: none;
+}
+
+.authentication-container {
+  display: flex;
+  width: 900px;
+  justify-content: space-between;
+  margin: 30px auto;
 }
 
 /*# sourceMappingURL=categories.styles.css.map */
