@@ -45,4 +45,4 @@ async function getBookByISBN(isbn) {
 }
 
 // ✅ Ejemplo de uso:
-getBookByISBN('9786071514684').then(data => console.log(data))
+getBookByISBN('9780071834087').then(data => console.log(data))

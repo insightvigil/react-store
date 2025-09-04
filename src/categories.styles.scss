@@ -6,4 +6,8 @@
 @use './components/sign-up-form/sign-up-form.styles.scss';
 @use './components/sign-in-form/sign-in-form.styles';
 @use './components/button/button.styles';
-@use './routes/authentication/authentication.styles.scss'
+@use './routes/authentication/authentication.styles.scss';
+@use './components/product-card/product-card.styles';
+@use './routes/shop/shop.styles';
+@use './components/cart-icon/cart-icon.styles.scss';
+@use './components/cart-dropdown/cart-dropdown.styles';
