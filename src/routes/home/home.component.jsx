@@ -1,4 +1,3 @@
-import '../../categories.styles.css';
 import Directory from '../../components/directory/directory.component';
 import { Outlet } from 'react-router';
 
@@ -35,8 +34,8 @@ const Home = () => {
   return (
     <>
       
-      <Directory categories={categories}/>:
-      <Outlet></Outlet>
+      <Directory categories={categories}/>
+      <Outlet/>
     </>
   )
 }

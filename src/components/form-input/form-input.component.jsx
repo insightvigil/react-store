@@ -1,4 +1,4 @@
-import '../../categories.styles.css';
+import './_form-input.styles.scss';
 
 const FormInput = ({label, ...otherProps}) => {
     return(

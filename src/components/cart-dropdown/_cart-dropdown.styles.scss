@@ -15,11 +15,21 @@
     height: 300px;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto;
+    scrollbar-width: none;
+
+    
+    
+      Button {
+      font-size: 12px;
+      margin-top: auto;
+      } 
+
+    
+    
+  
   }
 
-  Button {
-    font-size: 12px;
-    margin-top: auto;
-  }
+  
+  
 }

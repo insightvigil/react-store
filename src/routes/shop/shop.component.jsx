@@ -4,7 +4,7 @@ import { ProductsContext } from "../../context/products.context";
 
 import ProductCard from "../../components/product-card/product-card.component";
 
-import '../../categories.styles.css';
+import './_shop.styles.scss';
 
 const Shop = () => {
 
