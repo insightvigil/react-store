@@ -11,10 +11,27 @@ import CheckOut from './routes/checkout/checkout.component'
 
 import './categories.styles.scss';
 
-
+import { useEffect, } from 'react';
+import {onAuthStateChangedListener,createUserDocumentFromAuth} from './utils/firebase/firebase.utils'
+//import {setCurrentUser} from './store/user/user.action'
 
 
 const App = () => {
+  useEffect(()=> {
+        
+        const unsubscribe = onAuthStateChangedListener((user)=> {
+            
+            if(user) {
+                createUserDocumentFromAuth(user);
+            }
+
+          
+        })
+        
+        return unsubscribe
+
+    }, [])
+
  return(
   <Routes>
     <Route path='/' element={<Navigation/>}>

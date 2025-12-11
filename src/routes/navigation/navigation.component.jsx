@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Outlet,Link } from 'react-router';
+import { Outlet, Link} from 'react-router';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 
@@ -12,6 +12,9 @@ import {NavigationContainer, NavLinks, NavLink, LogoContainer} from './_navigati
 
 const Navigation = () => {
   const {currentUser} = useContext(UserContext);
+  
+  
+  
   const {isCartOpen} = useContext(CartContext);
 
   
@@ -49,3 +52,4 @@ const Navigation = () => {
 }
 
 export default Navigation;
+

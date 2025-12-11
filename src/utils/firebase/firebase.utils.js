@@ -10,6 +10,7 @@ import {
   signInWithEmailAndPassword, 
   signOut, onAuthStateChanged, 
   } from "firebase/auth"; 
+
 import {
   getFirestore,
   doc, 
@@ -53,8 +54,11 @@ export const signInWithGoogleRedirect = () => signInWithRedirect(auth, provider)
 
 export const db = getFirestore();
 
-export const addColletionAndDocuments = async(collectionKey,objectsToAdd) => {
+export const addColletionAndDocuments = async (collectionKey,objectsToAdd) => {
+  //We create the collection
   const collectionRef = collection(db, collectionKey);
+
+  //Attach several operations to one
   const batch = writeBatch(db);
 
   objectsToAdd.forEach((object)=> {
@@ -70,6 +74,7 @@ export const getCategoriesAndDocuments = async () => {
   const q = query(collectionRef);
 
   const querySnapshot = await getDocs(q);
+  
   const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot)=> {
     const {title, items} = docSnapshot.data();
     acc[title.toLowerCase()] = items;

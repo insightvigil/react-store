@@ -32,7 +32,7 @@ const Directory = () => {
         {
             id: 5,
             title: "mens",
-            imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
+            imageUrl: "https://images.pexels.com/photos/17245493/pexels-photo-17245493.jpeg",
             route: 'shop/mens'
         }
     ];

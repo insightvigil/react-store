@@ -6,10 +6,10 @@ import './_shop.styles.scss';
 const Shop = () => {
 
     return(
-        <Routes>
-            <Route index element={<CategoriesPreview/>}/>
-            <Route path=":category" element={<Category/>}></Route>
-        </Routes>
+            <Routes>
+                <Route index element={<CategoriesPreview/>}/>
+                <Route path=":category" element={<Category/>}></Route>
+            </Routes>
     )
 }
 
