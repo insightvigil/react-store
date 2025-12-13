@@ -1,4 +1,4 @@
-import { useState, createContext, useEffect,useReducer } from "react";
+/*import { useState, createContext, useEffect,useReducer } from "react";
 
 import { getCategoriesAndDocuments } from "../utils/firebase/firebase.utils.js";
 
@@ -28,4 +28,4 @@ export const CategoriesProvider = ({children})=> {
     )
 }
 
-//<ProviderContext.Provider>{children}</ProviderContext.Provider>
+//<ProviderContext.Provider>{children}</ProviderContext.Provider>*/

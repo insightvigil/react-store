@@ -1,8 +1,5 @@
 import {Route, Routes} from 'react-router';
 
-
-
-
 import Home from './routes/home/home.component'
 import Navigation from './routes/navigation/navigation.component';
 import Authentication from './routes/authentication/authentication';
@@ -13,10 +10,13 @@ import './categories.styles.scss';
 
 import { useEffect, } from 'react';
 import {onAuthStateChangedListener,createUserDocumentFromAuth} from './utils/firebase/firebase.utils'
-//import {setCurrentUser} from './store/user/user.action'
 
+import {setCurrentUser} from './store/user/user.action'
+import { useDispatch } from 'react-redux';
 
 const App = () => {
+  const dispatch = useDispatch();
+
   useEffect(()=> {
         
         const unsubscribe = onAuthStateChangedListener((user)=> {
@@ -24,13 +24,13 @@ const App = () => {
             if(user) {
                 createUserDocumentFromAuth(user);
             }
+            dispatch(setCurrentUser(user))
 
-          
         })
         
         return unsubscribe
 
-    }, [])
+  }, [])
 
  return(
   <Routes>

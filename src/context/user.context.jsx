@@ -9,12 +9,18 @@ export const UserContext = createContext({
     setCurrentUser: ()=> null,
 });
 
+
+//Here we set the initial reducer state
+const INITIAL_STATE = {
+    currentUser: null
+}
+
 //To avoid human errors writing we storage the strings in some constant type
 export const USER_ACTION_TYPES = {
     SET_CURRENT_USER: 'SET_CURRENT_USER'
 }
 
-
+//Reducer Itself
 const userReducer = (state, action) => {
 
     //Action type y payload data that we use
@@ -30,10 +36,6 @@ const userReducer = (state, action) => {
         default:
             throw new Error(`Unhandled type ${type} in userReducer`);
     }  
-}
-
-const INITIAL_STATE = {
-    currentUser: null
 }
 
 

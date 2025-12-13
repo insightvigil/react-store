@@ -8,21 +8,23 @@ import App from './App.jsx'
 import './index.css'
 import { UserProvider } from './context/user.context.jsx';
 import { CartProvider } from './context/cart.context.jsx';
-import { CategoriesProvider } from './context/categories.context.jsx';
 
+import { store } from './store/store.js';
+
+import {Provider} from 'react-redux';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     
-      <BrowserRouter>
-        <UserProvider>   
-          <CategoriesProvider>
+      <Provider store={store}>
+        <BrowserRouter>
+        
             <CartProvider>
-              <App />  
+              <App />
             </CartProvider>
-          </CategoriesProvider>  
-        </UserProvider>
-      </BrowserRouter>
+         
+        </BrowserRouter>
+      </Provider>
     
   </StrictMode>,
 )
