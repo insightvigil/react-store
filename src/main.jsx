@@ -6,8 +6,7 @@ import App from './App.jsx'
 
 
 import './index.css'
-import { UserProvider } from './context/user.context.jsx';
-import { CartProvider } from './context/cart.context.jsx';
+
 
 import { store } from './store/store.js';
 
@@ -18,11 +17,7 @@ createRoot(document.getElementById('root')).render(
     
       <Provider store={store}>
         <BrowserRouter>
-        
-            <CartProvider>
-              <App />
-            </CartProvider>
-         
+              <App />  
         </BrowserRouter>
       </Provider>
     
